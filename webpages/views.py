@@ -5,25 +5,21 @@ from django.shortcuts import render
 
 
 def index(request):
-    marks = [67, 34, 89, 90, 23, 11, 89, 45, 23, 12, 6, 8, 9, 0]
 
-    data = {
-        "firstname": "Sahana",
-        "lastname": "Parihar",
-        "class": 6,
-        "is_pass": True,
-        "marks": marks,
-    }
+    data = {"index_page": "active"}
     return render(request, "index.html", data)
 
 
 def about(request):
-    return render(request, "about.html")
+    data = {"about_page": "active"}
+    return render(request, "about.html", data)
 
 
 def recipe(request):
-    return render(request, "recipe.html")
+    data = {"recipe_page": "active"}
+    return render(request, "recipe.html", data)
 
 
 def contact(request):
-    return render(request, "contact.html")
+    data = {"contact_page": "active"}
+    return render(request, "contact.html", data)

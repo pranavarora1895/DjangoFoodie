@@ -1,34 +1,132 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{%block content%}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Welcome to Django</h1>
-    <h2>{{firstname}} {{lastname}}</h2>
-    <h2>Class: {{class}}</h2>
-    {% if is_pass%}
-    <h2>Congratulations!! You are passed</h2>
-    {%else%}
-    <h2>Sorry, Better luck next time!!</h2>
-    {%endif%}
 
-    <h2>{{firstname}}'s Marks</h2>
-    <ul>
-        {%for mark in marks %}
-        <li>{{mark}}</li>
-        {%endfor%}
-    </ul>
-</body>
+    <div class="container-fluid mb-4 px-0">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{% static './img/food_delivery1.jpg' %}" class="d-block w-100" alt="food_delivery1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Get delivery within 20 minutes</h5>
+                        <p>Or get it for free.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static './img/food_delivery2.jpg'%}" class="d-block w-100" alt="food_delivery2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Get different worldwide cuisine</h5>
+                        <p>Order Indian, Mexican, Thai or Japanese food.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static './img/food_delivery3.jpg' %}" class="d-block w-100" alt="food_delivery3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Get delicious meal at affordable prices</h5>
+                        <p>Contact us to avail major cashback discounts now.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
-</html>
+    <div class="container mb-3">
+        <h2 class="text-center">Order our delicious meal now!!</h2>
+        <div class="row">
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/pizza.jpg' %}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza</h5>
+                    <p class="card-text">Get fresh handmade baked pizza.</p>
+                    <p class="card-text">Price: ₹599</p>
 
-{%endblock%}
+                    <a href="https://www.zomato.com/jhansi/restaurants/pizza?category=1" target="_blank"
+                        class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/burgers.jpg' %}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Burgers</h5>
+                    <p class="card-text">Get our healthy burger.</p>
+                    <p class="card-text">Price: ₹399</p>
+                    <a href="https://www.zomato.com/jhansi/restaurants/burger?category=1" target="_blank"
+                        class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/breakfastmeal.jpg' %}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Breakfast Meal</h5>
+                    <p class="card-text">Get full healthy breakfast meal</p>
+                    <p class="card-text">Price: ₹459</p>
+                    <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=835ef6c0b2999746e9a5bdc11b3e528c_2&category=1"
+                        target="_blank" class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/vegsoup.jpg' %}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Vegetable Soup</h5>
+                    <p class="card-text">Get hot mix veg soup</p>
+                    <p class="card-text">Price: ₹159</p>
+                    <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=d864ff1d78fb9feea4fb8d602b799469_2&category=1"
+                        target="_blank" class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/pancake.jpg'%}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Waffle Pancake</h5>
+                    <p class="card-text">Get yummy waffle pancakes.</p>
+                    <p class="card-text">Price: ₹799</p>
+                    <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=fc5930a6007fef9b7d998f205417e671_2&category=1"
+                        target="_blank" class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+            <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+                <img src="{% static './img/ice_cream.jpg'%}" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Ice Cream</h5>
+                    <p class="card-text">Get all-flavor chill ice creams</p>
+                    <p class="card-text">Price: ₹545</p>
+                    <a href="https://www.zomato.com/jhansi/restaurants/ice-cream?category=1" target="_blank"
+                        class="btn btn-primary">Order Now!!</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mb-3">Subscribe to our daily newsletter!!</h2>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="exampleInputName">
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe!!</button>
+        </form>
+    </div>
+
+    {% endblock content %}

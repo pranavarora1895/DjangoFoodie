@@ -1,1 +1,32 @@
-<h1>Contact</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+   <!-- Hero  -->
+
+   <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://img.icons8.com/ios/100/000000/add-phone.png" alt="" width="72"
+        height="57">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
+            most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.</p>
+    </div>
+</div>
+
+<!-- Map  -->
+<div class="container text-center">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4519.522305337329!2d78.56750912279026!3d25.447586011398894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3977772bada68da5%3A0xc92fd3edf1107970!2sElite%20Cinema%20Hall!5e0!3m2!1sen!2sin!4v1642144512582!5m2!1sen!2sin"
+        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Contact Form  -->
+<div class="container text-center">
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScic5CGru0ZqEWpvpQb9WZAGaMngld-HGLw-rOrwqrNqa-j3g/viewform?embedded=true"
+        width="800" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+
+{% endblock content %}
