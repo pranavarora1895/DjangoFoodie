@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <!-- Hero  -->
+<!-- Hero  -->
 
-   <div class="px-4 py-5 my-5 text-center">
+<div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4" src="https://img.icons8.com/ios/100/000000/add-phone.png" alt="" width="72"
         height="57">
     <h1 class="display-5 fw-bold">Contact Us</h1>
@@ -22,10 +22,27 @@
 </div>
 
 <!-- Contact Form  -->
-<div class="container text-center">
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScic5CGru0ZqEWpvpQb9WZAGaMngld-HGLw-rOrwqrNqa-j3g/viewform?embedded=true"
-        width="800" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="container px-5">
+    <h2 class="text-center mt-4">Get in Touch</h2>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputName">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputSubject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="exampleInputSubject">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputTextarea" class="form-label">Message</label>
+            <textarea type="email" class="form-control" id="exampleInputTextarea"> </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 
