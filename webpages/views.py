@@ -1,5 +1,6 @@
 from urllib import request
 from django.shortcuts import render
+from .models import Contact
 
 # Create your views here.
 
@@ -21,5 +22,13 @@ def recipe(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        subject = request.POST["subject"]
+        message = request.POST["message"]
+
+        contact = Contact(name=name, email=email, subject=subject, message=message)
+        contact.save()
     data = {"contact_page": "active"}
     return render(request, "contact.html", data)

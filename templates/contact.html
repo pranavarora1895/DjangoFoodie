@@ -24,22 +24,23 @@
 <!-- Contact Form  -->
 <div class="container px-5">
     <h2 class="text-center mt-4">Get in Touch</h2>
-    <form>
+    <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleInputName">
+            <input type="text" class="form-control" id="exampleInputName" name="name">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail">
+            <input type="email" class="form-control" id="exampleInputEmail" name="email">
         </div>
         <div class="mb-3">
             <label for="exampleInputSubject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="exampleInputSubject">
+            <input type="text" class="form-control" id="exampleInputSubject" name="subject">
         </div>
         <div class="mb-3">
             <label for="exampleInputTextarea" class="form-label">Message</label>
-            <textarea type="email" class="form-control" id="exampleInputTextarea"> </textarea>
+            <textarea type="email" class="form-control" id="exampleInputTextarea" name="message"> </textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
