@@ -11,3 +11,13 @@ class Contact(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Newsletter(models.Model):
+
+    email = models.EmailField(max_length=255)
+    name = models.CharField(max_length=255)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name

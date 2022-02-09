@@ -1,11 +1,19 @@
+import email
 from urllib import request
 from django.shortcuts import render
-from .models import Contact
+from .models import Contact, Newsletter
 
 # Create your views here.
 
 
 def index(request):
+
+    if request.method == "POST":
+        email = request.POST["email"]
+        name = request.POST["name"]
+
+        newsletter = Newsletter(email=email, name=name)
+        newsletter.save()
 
     data = {"index_page": "active"}
     return render(request, "index.html", data)
