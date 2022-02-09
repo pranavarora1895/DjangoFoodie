@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 # Create your models here.
@@ -21,3 +22,15 @@ class Newsletter(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Dishes(models.Model):
+    title = models.CharField(max_length=255)
+    subtitle = models.TextField(blank=True)
+    price = models.IntegerField(default=0)
+    food_link = models.URLField()
+    photo_dish = models.ImageField(upload_to="media/dishes/%Y/%m")
+    created_date = models.DateTimeField(default=datetime.now)
+
+    def __str__(self) -> str:
+        return self.title
