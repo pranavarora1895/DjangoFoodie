@@ -43,71 +43,24 @@
     </div>
 </div>
 
+
+
 <div class="container mb-3">
     <h2 class="text-center">Order our delicious meal now!!</h2>
     <div class="row">
+        {%for dish in dishes%}
         <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/pizza.jpg' %}" class="card-img-top" alt="pizza">
+            <img src="{{dish.photo_dish.url}}" class="card-img-top" alt="pizza">
             <div class="card-body">
-                <h5 class="card-title">Pizza</h5>
-                <p class="card-text">Get fresh handmade baked pizza.</p>
-                <p class="card-text">Price: ₹599</p>
+                <h5 class="card-title">{{dish.title}}</h5>
+                <p class="card-text">{{dish.subtitle}}</p>
+                <p class="card-text">Price: ₹{{dish.price}}</p>
 
-                <a href="https://www.zomato.com/jhansi/restaurants/pizza?category=1" target="_blank"
-                    class="btn btn-primary">Order Now!!</a>
+                <a href="{{dish.food_link}}" target="_blank" class="btn btn-primary">Order Now!!</a>
             </div>
         </div>
+        {%endfor%}
 
-        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/burgers.jpg' %}" class="card-img-top" alt="pizza">
-            <div class="card-body">
-                <h5 class="card-title">Burgers</h5>
-                <p class="card-text">Get our healthy burger.</p>
-                <p class="card-text">Price: ₹399</p>
-                <a href="https://www.zomato.com/jhansi/restaurants/burger?category=1" target="_blank"
-                    class="btn btn-primary">Order Now!!</a>
-            </div>
-        </div>
-        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/breakfastmeal.jpg' %}" class="card-img-top" alt="pizza">
-            <div class="card-body">
-                <h5 class="card-title">Breakfast Meal</h5>
-                <p class="card-text">Get full healthy breakfast meal</p>
-                <p class="card-text">Price: ₹459</p>
-                <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=835ef6c0b2999746e9a5bdc11b3e528c_2&category=1"
-                    target="_blank" class="btn btn-primary">Order Now!!</a>
-            </div>
-        </div>
-        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/vegsoup.jpg' %}" class="card-img-top" alt="pizza">
-            <div class="card-body">
-                <h5 class="card-title">Vegetable Soup</h5>
-                <p class="card-text">Get hot mix veg soup</p>
-                <p class="card-text">Price: ₹159</p>
-                <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=d864ff1d78fb9feea4fb8d602b799469_2&category=1"
-                    target="_blank" class="btn btn-primary">Order Now!!</a>
-            </div>
-        </div>
-        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/pancake.jpg'%}" class="card-img-top" alt="pizza">
-            <div class="card-body">
-                <h5 class="card-title">Waffle Pancake</h5>
-                <p class="card-text">Get yummy waffle pancakes.</p>
-                <p class="card-text">Price: ₹799</p>
-                <a href="https://www.zomato.com/jhansi/restaurants?dishv2_id=fc5930a6007fef9b7d998f205417e671_2&category=1"
-                    target="_blank" class="btn btn-primary">Order Now!!</a>
-            </div>
-        </div>
-        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{% static './img/ice_cream.jpg'%}" class="card-img-top" alt="pizza">
-            <div class="card-body">
-                <h5 class="card-title">Ice Cream</h5>
-                <p class="card-text">Get all-flavor chill ice creams</p>
-                <p class="card-text">Price: ₹545</p>
-                <a href="https://www.zomato.com/jhansi/restaurants/ice-cream?category=1" target="_blank"
-                    class="btn btn-primary">Order Now!!</a>
-            </div>
-        </div>
 
 
     </div>

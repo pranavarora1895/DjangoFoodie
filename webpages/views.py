@@ -1,7 +1,7 @@
 import email
 from urllib import request
 from django.shortcuts import render
-from .models import Contact, Newsletter
+from .models import Contact, Newsletter, Dishes
 
 # Create your views here.
 
@@ -15,7 +15,9 @@ def index(request):
         newsletter = Newsletter(email=email, name=name)
         newsletter.save()
 
-    data = {"index_page": "active"}
+    dishes = Dishes.objects.order_by("-created_date")
+
+    data = {"index_page": "active", "dishes": dishes}
     return render(request, "index.html", data)
 
 
