@@ -50,7 +50,7 @@
     <div class="row">
         {%for dish in dishes%}
         <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
-            <img src="{{dish.photo_dish.url}}" class="card-img-top" alt="pizza">
+            <img src="{{dish.photo_dish.url}}" class="card-img-top" alt="{{dish.title}}">
             <div class="card-body">
                 <h5 class="card-title">{{dish.title}}</h5>
                 <p class="card-text">{{dish.subtitle}}</p>

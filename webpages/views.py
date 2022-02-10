@@ -2,6 +2,7 @@ import email
 from urllib import request
 from django.shortcuts import render
 from .models import Contact, Newsletter, Dishes
+from django.db.models import Q
 
 # Create your views here.
 
@@ -42,3 +43,17 @@ def contact(request):
         contact.save()
     data = {"contact_page": "active"}
     return render(request, "contact.html", data)
+
+
+def search(request):
+    dishes = Dishes.objects.order_by("-created_date")
+
+    if "query" in request.GET:
+        query = request.GET["query"]
+        if query:
+            dishes = dishes.filter(
+                Q(title__icontains=query) | Q(price__icontains=query)
+            )
+
+    data = {"index_page": "active", "dishes": dishes}
+    return render(request, "search.html", data)

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if dishes %}
+<div class="container mb-3">
+    <h2 class="text-center">Here are your search results!!</h2>
+    <div class="row">
+        {%for dish in dishes%}
+        <div class="card col-sm-4 m-2 px-0" style="width: 18rem;">
+            <img src="{{dish.photo_dish.url}}" class="card-img-top" alt="{{dish.title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{dish.title}}</h5>
+                <p class="card-text">{{dish.subtitle}}</p>
+                <p class="card-text">Price: ₹{{dish.price}}</p>
+
+                <a href="{{dish.food_link}}" target="_blank" class="btn btn-primary">Order Now!!</a>
+            </div>
+        </div>
+        {%endfor%}
+
+
+
+    </div>
+</div>
+
+{% else %}
+<div class="container text-center">
+    <h2>
+        Sorry!! No Results Found !!
+    </h2>
+</div>
+
+{% endif %}
+
+
+
+
+
+{% endblock content %}
