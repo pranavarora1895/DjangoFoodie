@@ -29,3 +29,12 @@ For the module that we have to install, refer to **[requirements.txt](https://gi
 * Activate the environment
 * Add this command - `pip install -r requirements.txt`
 
+---
+
+* Follow Me On Instagram at [Pranav Arora](https://www.instagram.com/arorapranav187)
+* Lets Get Connected on Linkedin at [Pranav Arora](https://www.linkedin.com/in/pranav-arora-354b71bb/)
+
+
+### ThankYou!
+
+
